@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <title> Formulário </title>
+    <meta charset="utf-8">
+    <meta name="author" content="Isis">
+    <meta name="description" content="descrição qualquer">
+    <meta name="keywords" content="tecnologia, html, código">
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <h1>Formulário de inscrição</h1>
+
+    <form class="formExample" method="post" name="formula">
+        <!-- action="#" method="get ou post"> -->
+        
+        <fieldset id="fieldDados">
+            <legend>Dados Pessoais</legend>
+
+            <label class="large_label" for="form_nome">Nome:</label>
+            <input class="large_input" type="text" name="q" id="form_nome" autofocus  placeholder="Nome completo">
+            
+            <label class="large_label" for="form_data">Data de nascimento:</label>
+            <input class="normal_input" type="text" name="q" id="form_data" >
+
+            <p>Sexo:</p>
+            <label class="sex_label"><input class="sex" type="radio" name="sexo" value="F">Feminino</label>
+            <label class="sex_label"><input class="sex" type="radio" name="sexo" id="sexo" value="M">Masculino</label>
+
+        </fieldset>
+
+        <fieldset class="fieldEndereco">
+            <legend>Endereço</legend>
+            
+            <label class="normal_label" for="form_end">Endereço:</label>
+            <input class="large_input" type="text" name="q" id="form_end"  placeholder="Logradouro e número">
+
+            <label class="normal_label" for="form_end_com">Complemento:</label>
+            <input class="normal_input" type="text" name="q" id="form_end_com">
+
+            <label class="normal_label" for="form_end_bai">Bairro:</label>
+            <input class="normal_input" type="text" name="q" id="form_end_bai" >
+
+            <label class="normal_label" for="form_end_cid">Cidade:</label>
+            <input class="normal_input" type="text" name="q" id="form_end_cid" >
+
+            <label class="normal_label">Estado:</label>
+            <select id="select" name="estado">
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                </select>
+
+        </fieldset>
+           
+        <fieldset class="fieldContact">
+            <legend>Contato</legend>
+           
+            <label class="normal_label" for="form_tel">Telefone:</label>
+            <input class="normal_input" type="tel" name="q" id="form_tel" placeholder="(11)99999-9999" maxlength="13">
+        
+            <label class="normal_label" for="form_cel">Celular:</label>
+            <input class="normal_input" type="tel" name="q" id="form_cel"  placeholder="(11)99999-9999" maxlength="13">
+        
+            <label class="normal_label" for="form_end_email">E-mail:</label>
+            <input class="normal_input" type="email" name="q" id="form_end_email" >
+        
+        </fieldset>
+
+        <fieldset class="fieldInt">
+            <legend>Interesses</legend>
+
+            <label class="large_label">Áreas de interesses:</label>
+            <label class="checkbox_label"><input class="checkbox" type="checkbox" name="ch[]" value="arte">  Arte</label>
+            <label class="checkbox_label"><input class="checkbox" type="checkbox" name="ch[]" value="musica">  Música</label>
+            <label class="checkbox_label"><input class="checkbox" type="checkbox" name="ch[]" value="esporte">  Esporte</label>
+            <label class="checkbox_label"><input class="checkbox" type="checkbox" name="ch[]" value="gastronomia">  Gastronomia</label>
+            <label class="checkbox_label"><input class="checkbox" type="checkbox" name="ch[]" value="cinema">  Cinema</label>
+            <label class="checkbox_label"><input class="checkbox" type="checkbox" name="ch[]" value="historia">  História</label>
+            <label class="checkbox_label"><input class="checkbox" type="checkbox" name="ch[]" value="viagens">  Viagem</label>
+            
+
+            <label class="text_area" for="texto">Conte-nos mais um pouco sobre você e por que decidiu fazer o curso:</label>
+            <textarea name="msg"  id="texto" maxlength="400" value="msg_texto"></textarea>
+
+        </fieldset>
+
+
+        <input  class="btn_send" type="button" value="Enviar" onclick="executar()">
+    </form>
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-firestore.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
