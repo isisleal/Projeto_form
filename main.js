@@ -24,18 +24,6 @@
             } 
         }
     }
-
-    
-
-    function obterMarcados() {
-        var listaMarcados = document.getElementsByClassName("checkbox");
-        for (i = 0; i < listaMarcados.length; i++) {
-           if (listaMarcados[i].checked == true){
-                        var item = listaMarcados[i].checked
-                        return new Array(Array(indexedDB), Array[item])
-           }
-        }
-      } 
     
 
   
@@ -53,7 +41,6 @@
     telefone: document.getElementById("form_tel").value,
     celular: document.getElementById("form_cel").value,
     email: document.getElementById("form_end_email").value,
-   interesses: obterMarcados(),
     mensagem: document.getElementById("texto").value,
     
     
