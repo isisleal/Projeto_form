@@ -9,7 +9,7 @@
    });
   
    var db = firebase.firestore()
-   
+
    function executar(){  
 
   
